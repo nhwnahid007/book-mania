@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveBook } from "../../Utility/localStorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -18,6 +19,7 @@ const BookDetails = () => {
     yearOfPublishing,
   } = book;
   console.log(book, id);
+  console.log(book.id)
   return (
     <div className="hero min-h-[720px] ">
       <div className="hero-content flex-col lg:flex-row">
@@ -54,7 +56,7 @@ const BookDetails = () => {
             <p className="flex-1 font-bold">{rating}</p>
           </div>
           <div className="flex mt-5 justify-start gap-5">
-            <button className="btn">Read</button>
+            <button onClick={()=>saveBook(book.id)} className="btn">Read</button>
             <button className="btn bg-info">Wishlist</button>
           </div>
         </div>
