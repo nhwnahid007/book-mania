@@ -5,7 +5,7 @@ import Book from "../Book/Book";
 
 const Home = () => {
     const books = useLoaderData()
-    console.log(books)
+    
     return (
         <div>
             <Banner></Banner>

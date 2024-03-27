@@ -1,10 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
-    const links = <div className="space-x-5">
-        
-        
-    </div>
   return (
     <div className="navbar mt-5 bg-base-100">
       <div className="navbar-start">
