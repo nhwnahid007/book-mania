@@ -1,5 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 export const getBooks = () => {
   let books = [];
@@ -16,8 +16,37 @@ export const saveBook = (book) => {
     return toast.error("Already Bookmarked!");
     
   }
-  console.log('saved')
+  
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
   toast.success("book Bookmarked Successfully!");
+};
+
+export const getWishList = () => {
+  let wishLists = [];
+  const storedWishLists = localStorage.getItem("wishLists");
+  if (storedWishLists) {
+    wishLists = JSON.parse(storedWishLists);
+  }
+  return wishLists;
+};
+
+export const saveWhishList = (book) => {
+  let wishLists = getWishList();
+  let books = getBooks();
+
+  const isExistInWishList = wishLists.find((b) => b.id === book.id);
+  const isExistInBooks = books.find((b) => b.id === book.id);
+
+  if (isExistInBooks) {
+    return toast.error("Already Bookmarked!");
+  }
+
+  if (isExistInWishList) {
+    return toast.error("Already in Wishlist!");
+  }
+
+  wishLists.push(book);
+  localStorage.setItem("wishLists", JSON.stringify(wishLists));
+  toast.success("Book Added to Wishlist Successfully!");
 };

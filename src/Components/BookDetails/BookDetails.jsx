@@ -1,8 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveBook } from "../../Utility/localStorage";
+import { saveBook, saveWhishList } from "../../Utility/localStorage";
 
 const BookDetails = () => {
-  const books = useLoaderData();
+  const books = useLoaderData(); 
   const { id } = useParams();
   const idInt = parseInt(id);
   const book = books.find((book) => book.id === idInt);
@@ -56,8 +56,8 @@ const BookDetails = () => {
             <p className="flex-1 font-bold">{rating}</p>
           </div>
           <div className="flex mt-5 justify-start gap-5">
-            <button onClick={()=>saveBook(book.id)} className="btn">Read</button>
-            <button className="btn bg-info">Wishlist</button>
+            <button onClick={()=>saveBook(book)} className="btn">Read</button>
+            <button onClick={()=>saveWhishList(book)} className="btn bg-info">Wishlist</button>
           </div>
         </div>
       </div>
