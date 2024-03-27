@@ -2,48 +2,48 @@ import "react-toastify/dist/ReactToastify.css";
 import toast from "react-hot-toast";
 
 export const getBooks = () => {
-  let books = [];
+  
   const storedBooks = localStorage.getItem("books");
   if (storedBooks) {
-    books = JSON.parse(storedBooks);
+    return JSON.parse(storedBooks);
   }
-  return books;
+  return [];
 };
 export const saveBook = (book) => {
   let books = getBooks();
-  const isExist = books.find((b) => b.id === book.id);
+  const isExist = books.find((b) => b === book);
   if (isExist) {
-    return toast.error("Already Bookmarked!");
+    return toast.error("You have already Read the Book");
     
   }
   
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
-  toast.success("book Bookmarked Successfully!");
+  toast.success("You have read the book Successfully!");
 };
 
 export const getWishList = () => {
-  let wishLists = [];
+  
   const storedWishLists = localStorage.getItem("wishLists");
   if (storedWishLists) {
-    wishLists = JSON.parse(storedWishLists);
+    return  JSON.parse(storedWishLists);
   }
-  return wishLists;
+  return [];
 };
 
 export const saveWhishList = (book) => {
   let wishLists = getWishList();
   let books = getBooks();
 
-  const isExistInWishList = wishLists.find((b) => b.id === book.id);
-  const isExistInBooks = books.find((b) => b.id === book.id);
+  const isExistInWishList = wishLists.find((b) => b === book);
+  const isExistInBooks = books.find((b) => b === book);
 
   if (isExistInBooks) {
-    return toast.error("Already Bookmarked!");
+    return toast.error("Already Added in wishLists!");
   }
 
   if (isExistInWishList) {
-    return toast.error("Already in Wishlist!");
+    return toast.error("You have added in Wishlist!");
   }
 
   wishLists.push(book);

@@ -18,8 +18,8 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
-  console.log(book, id);
-  console.log(book.id)
+  // console.log(book, id);
+  // console.log(book.id)
   return (
     <div className="hero min-h-[720px] ">
       <div className="hero-content flex-col lg:flex-row">
@@ -56,8 +56,8 @@ const BookDetails = () => {
             <p className="flex-1 font-bold">{rating}</p>
           </div>
           <div className="flex mt-5 justify-start gap-5">
-            <button onClick={()=>saveBook(book)} className="btn">Read</button>
-            <button onClick={()=>saveWhishList(book)} className="btn bg-info">Wishlist</button>
+            <button onClick={()=>saveBook(idInt)} className="btn">Read</button>
+            <button onClick={()=>saveWhishList(idInt)} className="btn bg-info">Wishlist</button>
           </div>
         </div>
       </div>
