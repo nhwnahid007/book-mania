@@ -1,6 +1,12 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Nav = () => {
+    const links = <div className="space-x-5">
+        
+        
+    </div>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar mt-5 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,52 +29,38 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            
+            <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold p-3"
+            } to={'/'}><button className="">Home</button></NavLink>
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/listed'}><button className="">Listed Books</button></NavLink>
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/pages'}><button className="">Pages To Read</button></NavLink>
+              
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to={'/'} className="btn btn-ghost text-xl">Books Mania</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+        <ul className="menu menu-horizontal space-x-5 px-1">
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3  border-[green] font-bold" : " p-3 border-none font-bold"
+            } to={'/'}><button className="">Home</button></NavLink>
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "p-3 border-none font-bold"
+            } to={'/listed'}><button className="">Listed Books</button></NavLink>
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "p-3 border-none font-bold"
+            } to={'/pages'}><button className="">Pages To Read</button></NavLink>
+          
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-5">
+        <a className="btn bg-success">Sign In</a>
+        <a className="btn bg-info">Sign Up</a>
       </div>
     </div>
   );

@@ -1,0 +1,99 @@
+
+[
+  {
+    "id": 1,
+    "bookName": "The Dating Playbook",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/c8BsC4G/pngwing-1.png",
+    "review": "A refreshing take on contemporary romance, The Dating Playbook by F. Scott Fitzgerald is a delightful journey through the complexities of modern relationships. Set against the backdrop of bustling cities and vibrant social scenes, the novel offers a nuanced exploration of love, ambition, and self-discovery. With its compelling characters and witty dialogue, Fitzgerald crafts a story that resonates with readers long after the final page. Whether you're a fan of romance or simply enjoy a well-written narrative, The Dating Playbook, is sure to captivate and charm",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": [
+      "Classics",
+      "Romance"
+    ],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "id": 2,
+    "bookName": "Why Do You Hate Money?",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/HTYXFkK/kindpng-7318921.png",
+    "review": "Harper Lee's Why Do You Hate Money? is a thought-provoking masterpiece that explores the intricacies of justice, morality, and human nature. Through the lens of a small Southern town grappling with racial tensions, Lee delves deep into the complexities of prejudice, compassion, and redemption. With its richly drawn characters and poignant storytelling, the novel challenges readers to confront their own biases and preconceptions. Why Do You Hate Money? is a timeless classic that continues to inspire and provoke discussion, reminding us of the power of empathy and understanding in an often divided world.",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": [
+      "Classics",
+      "Legal Drama"
+    ],
+    "publisher": "J.B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "id": 3,
+    "bookName": "The Hate U Give",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/9vyfyYt/kindpng-1064993.png",
+    "review": "George Orwell's The Hate U Give is a searing indictment of totalitarianism and oppression, offering a stark warning against the dangers of unchecked authority. Set in a dystopian society where freedom of thought and expression are brutally suppressed, the novel follows the journey of a young rebel who dares to challenge the status quo. Through its vivid imagery and biting social commentary, Orwell paints a chilling portrait of a world ruled by fear and propaganda. The Hate U Give is a timely reminder of the importance of vigilance and resistance in the face of tyranny, urging readers to question authority and defend their liberties.",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Fiction",
+    "tags": [
+      "Dystopian",
+      "Political Fiction"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "id": 4,
+    "bookName": "Scholarship Monthly Planner",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/G2y5RB0/kindpng-4022054-1.png",
+    "review": "J.D. Salinger's Scholarship Monthly Planner is a poignant coming-of-age tale that captures the angst and uncertainty of adolescence with remarkable insight and sensitivity. Through the eyes of its introspective protagonist, the novel explores themes of alienation, identity, and the search for meaning in a world that often feels overwhelming and incomprehensible. With its candid portrayal of teenage struggles and universal themes of belonging and self-discovery, Scholarship Monthly Planner continues to resonate with readers of all ages. Salinger's timeless prose and authentic voice make this novel a timeless classic that remains as relevant today as it was upon its initial publication.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": [
+      "Modern Classic",
+      "Alienation"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "id": 5,
+    "bookName": "Annotated Texas Family",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/9YW1XnD/kindpng-81724-1.png",
+    "review": "Jane Austen's Annotated Texas Family is a timeless masterpiece of romantic fiction that continues to enchant and delight readers over two centuries after its initial publication. Set in the idyllic English countryside, the novel follows the tumultuous love lives of the Bennet sisters as they navigate the complexities of courtship, marriage, and social status. With its richly drawn characters, sparkling wit, and incisive social commentary, Austen's novel offers a captivating glimpse into the manners and mores of Regency-era England. Annotated Texas Family is a timeless classic that reminds us of the enduring power of love, laughter, and human connection.",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": [
+      "Romance",
+      "Social Commentary"
+    ],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "id": 6,
+    "bookName": "Loving Jesus More",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/M1nRvJG/kindpng-2193744-1.png",
+    "review": "J.R.R. Tolkien's Loving Jesus More is a captivating epic that transports readers to the enchanting world of Middle-earth, where heroes and villains clash in a battle for the fate of the world. At its heart, the novel is a tale of friendship, courage, and sacrifice, as a disparate group of adventurers embarks on a perilous quest to destroy a powerful artifact of evil. With its richly imagined landscapes, complex characters, and epic battles, Tolkien's masterpiece continues to captivate and inspire readers of all ages. Loving Jesus More is a timeless classic that celebrates the enduring power of hope, faith, and redemption in the face of darkness and despair.",
+    "totalPages": 310,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": [
+      "Adventure",
+      "Epic Fantasy"
+    ],
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1937
+  }
+]
