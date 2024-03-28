@@ -11,7 +11,11 @@ import { IoIosArrowDropdown } from "react-icons/io";
 const Listed = () => {
   const lists = useLoaderData();
   const [read, setRead] = useState([]);
+  const [sortRead,setSortRead] =useState([])
   const [wish, setWish] = useState([]);
+  const [sortWish,setSortWish] =useState([]);
+  console.log(read)
+  console.log(sortRead)
   useEffect(() => {
     const storedBookIds = getBooks();
     //    if(lists.length>0){
@@ -25,6 +29,7 @@ const Listed = () => {
         readList.push(read);
       }
       setRead(readList);
+      setSortRead(readList);
     }
   }, [lists]);
 
@@ -41,21 +46,58 @@ const Listed = () => {
         wishList.push(wish);
       }
       setWish(wishList);
+      setSortWish(wishList);
     }
   }, [lists]);
 
+  const handleSort = filter => {
+    if(filter === 'all'){
+      setSortRead([...read])
+      setSortWish([...wish])
+
+    }
+    else if( filter === 'rating'){
+      const tempRating = [...read].sort(
+        (a,b) => b.rating-a.rating
+      )
+      setSortRead(tempRating);
+      setSortWish(tempRating);
+    }
+    else if( filter === 'pages'){
+      const tempRating = [...read].sort(
+        (a,b) => b.totalPages-a.totalPages
+      )
+      setSortRead(tempRating);
+      setSortWish(tempRating);
+    }
+    else if( filter === 'year'){
+      const tempRating = [...read].sort(
+        (a,b) => b.yearOfPublishing-a.yearOfPublishing
+      )
+      setSortRead(tempRating);
+      setSortWish(tempRating);
+    }
+
+  }
+
   return (
     <div>
-      <h1>Listed: {read.length} </h1>
+      <h1>Listed: {sortRead.length} </h1>
       <div className="w-60 mx-auto">
           <details className="dropdown">
             <summary className="m-1 bg-green-500 text-white btn">Sort By  <IoIosArrowDropdown /> </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
               <li>
-                <a>Item 1</a>
+                <button onClick={()=>handleSort('all')}>All</button>
               </li>
               <li>
-                <a>Item 2</a>
+                <button onClick={()=>handleSort('rating')}>Ratings</button>
+              </li>
+              <li>
+                <button onClick={()=>handleSort('pages')}>Number of pages</button>
+              </li>
+              <li>
+                <button onClick={()=>handleSort('year')}>Publish Year</button>
               </li>
             </ul>
           </details>
@@ -67,7 +109,7 @@ const Listed = () => {
         </TabList>
 
         <TabPanel>
-          {read.map((read, index) => (
+          {sortRead.map((read, index) => (
             <div key={index}>
               <div className="hero my-10 place-items-start rounded-lg border border-gray-400  border-opacity-25 ">
                 <div className="hero-content justify-start gap-10 flex-col lg:flex-row">
@@ -123,7 +165,7 @@ const Listed = () => {
           ))}
         </TabPanel>
         <TabPanel>
-          {wish.map((wish, index) => (
+          {sortWish.map((wish, index) => (
             <div key={index}>
               <div className="hero my-10 place-items-start rounded-lg border border-gray-400  border-opacity-25 ">
                 <div className="hero-content justify-start gap-10 flex-col lg:flex-row">
