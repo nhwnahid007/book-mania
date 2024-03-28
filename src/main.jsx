@@ -15,6 +15,8 @@ import { Toaster } from 'react-hot-toast';
 import AboutUS from './Components/AboutUs/AboutUS';
 import ContactUS from './Components/ContactUs/ContactUS';
 import ErrorPage from './Components/ErrorPage.jsx/ErrorPage';
+import SignIn from './Components/SignIn/SignIn';
+import SignUp from './Components/SignUp/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactUS></ContactUS>
+      },
+      {
+        path: 'signin',
+        element: <SignIn></SignIn>
+      },
+      {
+        path: 'signup',
+        element: <SignUp></SignUp>
       }
     ]
 

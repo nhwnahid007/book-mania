@@ -67,8 +67,8 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-5">
-        <a className="btn bg-success">Sign In</a>
-        <a className="btn bg-info">Sign Up</a>
+        <Link to={'/signin'} className="btn bg-success">Sign In</Link>
+        <Link to={'/signup'} className="btn bg-info">Sign Up</Link>
       </div>
     </div>
   );
