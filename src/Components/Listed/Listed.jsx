@@ -6,6 +6,7 @@ import "react-tabs/style/react-tabs.css";
 import { CiLocationOn } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
 import { MdInsertPageBreak } from "react-icons/md";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Listed = () => {
   const lists = useLoaderData();
@@ -46,7 +47,19 @@ const Listed = () => {
   return (
     <div>
       <h1>Listed: {read.length} </h1>
-
+      <div className="w-60 mx-auto">
+          <details className="dropdown">
+            <summary className="m-1 bg-green-500 text-white btn">Sort By  <IoIosArrowDropdown /> </summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </details>
+      </div>
       <Tabs>
         <TabList>
           <Tab>Read</Tab>
@@ -96,7 +109,10 @@ const Listed = () => {
                       <div className="rounded-full bg-yellow-300 text-yellow-600 bg-opacity-15 p-4">
                         Rating: {read.rating}
                       </div>
-                      <Link to={`/book/${read.id}`} className="rounded-full bg-green-500 text-white  p-4">
+                      <Link
+                        to={`/book/${read.id}`}
+                        className="rounded-full bg-green-500 text-white  p-4"
+                      >
                         View Details
                       </Link>
                     </div>
@@ -109,54 +125,57 @@ const Listed = () => {
         <TabPanel>
           {wish.map((wish, index) => (
             <div key={index}>
-            <div className="hero my-10 place-items-start rounded-lg border border-gray-400  border-opacity-25 ">
-              <div className="hero-content justify-start gap-10 flex-col lg:flex-row">
-                <img
-                  src={wish.image}
-                  className="max-w-sm rounded-lg shadow bg-opacity-5 bg-gray-700 "
-                />
-                <div className="lg:w-[620px]">
-                  <h1 className="text-5xl font-bold">{wish.bookName}</h1>
-                  <p className="py-6 font-work">by: {wish.author}</p>
-                  <div className="flex items-center font-work justify-start gap-5">
-                    <p className="font-bold">Tag</p>
-                    <p className=" text-green-500  bg-green-100 font-bold  p-1 rounded-lg">
-                      {wish.tags[0]}
-                    </p>
-                    <p className=" text-green-500 bg-green-100 font-bold p-1 rounded-lg">
-                      {wish.tags[1]}
-                    </p>
-                    <p className="flex items-center gap-2">
-                      {" "}
-                      <CiLocationOn /> Year of publish:{" "}
-                      {wish.yearOfPublishing}
-                    </p>
-                  </div>
-                  <div className="flex font-work text-[#13131399] my-5 gap-5">
-                    <p className="flex items-center gap-2">
-                      <FaUserFriends /> Publisher:{wish.publisher}{" "}
-                    </p>
-                    <p className="flex items-center">
-                      <MdInsertPageBreak /> Page {wish.totalPages}
-                    </p>
-                  </div>
-                  <hr className="bg-gray-700 bg-opacity-15 h-px" />
+              <div className="hero my-10 place-items-start rounded-lg border border-gray-400  border-opacity-25 ">
+                <div className="hero-content justify-start gap-10 flex-col lg:flex-row">
+                  <img
+                    src={wish.image}
+                    className="max-w-sm rounded-lg shadow bg-opacity-5 bg-gray-700 "
+                  />
+                  <div className="lg:w-[620px]">
+                    <h1 className="text-5xl font-bold">{wish.bookName}</h1>
+                    <p className="py-6 font-work">by: {wish.author}</p>
+                    <div className="flex items-center font-work justify-start gap-5">
+                      <p className="font-bold">Tag</p>
+                      <p className=" text-green-500  bg-green-100 font-bold  p-1 rounded-lg">
+                        {wish.tags[0]}
+                      </p>
+                      <p className=" text-green-500 bg-green-100 font-bold p-1 rounded-lg">
+                        {wish.tags[1]}
+                      </p>
+                      <p className="flex items-center gap-2">
+                        {" "}
+                        <CiLocationOn /> Year of publish:{" "}
+                        {wish.yearOfPublishing}
+                      </p>
+                    </div>
+                    <div className="flex font-work text-[#13131399] my-5 gap-5">
+                      <p className="flex items-center gap-2">
+                        <FaUserFriends /> Publisher:{wish.publisher}{" "}
+                      </p>
+                      <p className="flex items-center">
+                        <MdInsertPageBreak /> Page {wish.totalPages}
+                      </p>
+                    </div>
+                    <hr className="bg-gray-700 bg-opacity-15 h-px" />
 
-                  <div className="flex mt-5 font-work justify-around">
-                    <div className="rounded-full bg-blue-400 text-blue-700 bg-opacity-15 p-4">
-                      Category: {wish.category}
+                    <div className="flex mt-5 font-work justify-around">
+                      <div className="rounded-full bg-blue-400 text-blue-700 bg-opacity-15 p-4">
+                        Category: {wish.category}
+                      </div>
+                      <div className="rounded-full bg-yellow-300 text-yellow-600 bg-opacity-15 p-4">
+                        Rating: {wish.rating}
+                      </div>
+                      <Link
+                        to={`/book/${wish.id}`}
+                        className="rounded-full bg-green-500 text-white  p-4"
+                      >
+                        View Details
+                      </Link>
                     </div>
-                    <div className="rounded-full bg-yellow-300 text-yellow-600 bg-opacity-15 p-4">
-                      Rating: {wish.rating}
-                    </div>
-                    <Link to={`/book/${wish.id}`} className="rounded-full bg-green-500 text-white  p-4">
-                      View Details
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           ))}
         </TabPanel>
       </Tabs>
