@@ -38,6 +38,9 @@ const Nav = () => {
         <NavLink className={({isActive}) =>
               isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
             } to={'/about'}><button className="">About Us</button></NavLink>
+            <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/contact'}><button className="">Contact Us</button></NavLink>
               
           </ul>
         </div>
@@ -57,6 +60,9 @@ const Nav = () => {
             <NavLink className={({isActive}) =>
               isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
             } to={'/about'}><button className="">About Us</button></NavLink>
+            <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/contact'}><button className="">Contact Us</button></NavLink>
           
         </ul>
       </div>

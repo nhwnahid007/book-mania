@@ -12,7 +12,7 @@ const AboutUS = () => {
             Our mission is to create a vibrant online community where book enthusiasts can connect, share their love of literature, and discover new favorites. We offer a variety of features to help you explore the world of books, including:
           </p>
       </div>
-      <ul className="font-work mt-10 list-disc">
+      <ul className="font-work mt-10 text-gray-700 list-disc">
         <li className="">Personalized book recommendations</li>
         <li>Book reviews and author profiles</li>
         <li>Forums and book clubs for discussion</li>
