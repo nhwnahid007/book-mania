@@ -14,11 +14,13 @@ import BookDetails from './Components/BookDetails/BookDetails';
 import { Toaster } from 'react-hot-toast';
 import AboutUS from './Components/AboutUs/AboutUS';
 import ContactUS from './Components/ContactUs/ContactUS';
+import ErrorPage from './Components/ErrorPage.jsx/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'',

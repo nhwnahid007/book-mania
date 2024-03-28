@@ -35,8 +35,8 @@ const Pages = () => {
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
     return (
-        <div className="container mx-auto">
-           <h1 className="text-2xl text-center font-bold mb-4">Pages</h1> 
+        <div className="container mt-10 mx-auto">
+           
            
            <div className="overflow-x-auto">
                <ResponsiveContainer width="100%" height={500}>
@@ -56,6 +56,7 @@ const Pages = () => {
                     </BarChart>
                 </ResponsiveContainer>
             </div>
+            <p className="text text-center text-2xl font-black">Bar Chart</p>
         </div>
     );
 };
