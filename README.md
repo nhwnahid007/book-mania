@@ -4,9 +4,9 @@
 
  ## [Checkout the Link](https://your-book-mania.netlify.app/)
 
- check out our link [https://your-book-mania.netlify.app/](https://your-book-mania.netlify.app/).
+ check out our website [https://your-book-mania.netlify.app/](https://your-book-mania.netlify.app/).
 
-For Book Lovers:
+## For Book Lovers:
 
 Community Features:
 Book clubs: Allow users to create or join book clubs to discuss specific titles or genres.

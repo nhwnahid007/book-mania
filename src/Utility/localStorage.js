@@ -45,14 +45,14 @@ export const saveWhishList = (book) => {
   const isExistInBooks = books.find((b) => b === book);
 
   if (isExistInBooks) {
-    return toast.error("Already Added!",
+    return toast.error("Already Added in read!",
     {
       position: "top-right",
     });
   }
 
   if (isExistInWishList) {
-    return toast.error("You have added in Wishlist!",
+    return toast.error("You already have added in Wishlist!",
     {
       position: "top-right",
     });
@@ -60,5 +60,8 @@ export const saveWhishList = (book) => {
 
   wishLists.push(book);
   localStorage.setItem("wishLists", JSON.stringify(wishLists));
-  toast.success("Book Added to Wishlist Successfully!");
+  toast.success("Book Added to Wishlist Successfully!",
+  {
+    position: "top-right",
+  });
 };
