@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import { getBooks } from "../../Utility/localStorage";
 import { useEffect, useState } from "react";
-import React from 'react';
+import PropTypes from 'prop-types'
+
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Pages = () => {
@@ -60,5 +61,12 @@ const Pages = () => {
         </div>
     );
 };
-
+Pages.propTypes ={
+    props: PropTypes,
+    fill: PropTypes,
+    x: PropTypes,
+    y: PropTypes,
+    height: PropTypes,
+    width: PropTypes,
+}
 export default Pages;
