@@ -30,16 +30,16 @@ const Nav = () => {
               isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold p-3"
             } to={'/'}><button className="">Home</button></NavLink>
         <NavLink className={({isActive}) =>
-              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+              isActive ? "text-green-600 rounded-md border-2 p-1 border-[green] font-bold" : "font-bold"
             } to={'/listed'}><button className="">Listed Books</button></NavLink>
         <NavLink className={({isActive}) =>
-              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+              isActive ? "text-green-600 rounded-md border-2 p-1 border-[green] font-bold" : "font-bold"
             } to={'/pages'}><button className="">Pages To Read</button></NavLink>
         <NavLink className={({isActive}) =>
-              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+              isActive ? "text-green-600 rounded-md border-2 p-1 border-[green] font-bold" : "font-bold"
             } to={'/about'}><button className="">About Us</button></NavLink>
             <NavLink className={({isActive}) =>
-              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+              isActive ? "text-green-600 rounded-md border-2 p-1 border-[green] font-bold" : "font-bold"
             } to={'/contact'}><button className="">Contact Us</button></NavLink>
               
           </ul>

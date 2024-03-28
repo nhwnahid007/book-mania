@@ -62,11 +62,11 @@ const Pages = () => {
     );
 };
 Pages.propTypes ={
-    props: PropTypes,
-    fill: PropTypes,
-    x: PropTypes,
-    y: PropTypes,
-    height: PropTypes,
-    width: PropTypes,
+    props: PropTypes.string ,
+    fill: PropTypes.string ,
+    x: PropTypes.string,
+    y: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string,
 }
 export default Pages;

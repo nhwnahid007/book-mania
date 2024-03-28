@@ -13,13 +13,19 @@ export const saveBook = (book) => {
   let books = getBooks();
   const isExist = books.find((b) => b === book);
   if (isExist) {
-    return toast.error("You have already Read the Book");
+    return toast.error("Its already been added. This Book can not be added to the list again",{
+      position: "top-right",
+    });
+    
     
   }
   
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
-  toast.success("You have read the book Successfully!");
+  toast.success("You have read the book Successfully!",
+  {
+    position: "top-right",
+  });
 };
 
 export const getWishList = () => {
@@ -39,11 +45,17 @@ export const saveWhishList = (book) => {
   const isExistInBooks = books.find((b) => b === book);
 
   if (isExistInBooks) {
-    return toast.error("Already Added in wishLists!");
+    return toast.error("Already Added!",
+    {
+      position: "top-right",
+    });
   }
 
   if (isExistInWishList) {
-    return toast.error("You have added in Wishlist!");
+    return toast.error("You have added in Wishlist!",
+    {
+      position: "top-right",
+    });
   }
 
   wishLists.push(book);

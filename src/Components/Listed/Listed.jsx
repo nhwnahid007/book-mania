@@ -122,10 +122,10 @@ const Listed = () => {
                     <p className="py-6 font-work">by: {read.author}</p>
                     <div className="flex items-center font-work justify-start gap-5">
                       <p className="font-bold">Tag</p>
-                      <p className=" text-green-500  bg-green-100 font-bold  p-1 rounded-lg">
+                      <p className=" text-green-500  bg-green-100 font-bold  p-1 rounded-lg">#
                         {read.tags[0]}
                       </p>
-                      <p className=" text-green-500 bg-green-100 font-bold p-1 rounded-lg">
+                      <p className=" text-green-500 bg-green-100 font-bold p-1 rounded-lg">#
                         {read.tags[1]}
                       </p>
                       <p className="flex items-center gap-2">
