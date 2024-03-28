@@ -35,13 +35,16 @@ const Nav = () => {
         <NavLink className={({isActive}) =>
               isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
             } to={'/pages'}><button className="">Pages To Read</button></NavLink>
+        <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/about'}><button className="">About Us</button></NavLink>
               
           </ul>
         </div>
         <Link to={'/'} className="btn btn-ghost text-xl">Books Mania</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal space-x-5 px-1">
+        <ul className="menu menu-horizontal items-center space-x-5 px-1">
         <NavLink className={({isActive}) =>
               isActive ? "text-green-600 rounded-md border-2 p-3  border-[green] font-bold" : " p-3 border-none font-bold"
             } to={'/'}><button className="">Home</button></NavLink>
@@ -51,6 +54,9 @@ const Nav = () => {
         <NavLink className={({isActive}) =>
               isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "p-3 border-none font-bold"
             } to={'/pages'}><button className="">Pages To Read</button></NavLink>
+            <NavLink className={({isActive}) =>
+              isActive ? "text-green-600 rounded-md border-2 p-3 border-[green] font-bold" : "font-bold"
+            } to={'/about'}><button className="">About Us</button></NavLink>
           
         </ul>
       </div>
