@@ -46,7 +46,7 @@ const Pages = () => {
                         margin={{top: 20, right: 30, left: 20, bottom: 5}}
                     >
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="author" />
+                        <XAxis dataKey="bookName" />
                         <Tooltip />
                         <YAxis />
                         <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
